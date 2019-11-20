@@ -18,7 +18,6 @@ TEMPLATE_JS_SOURCES
 <body>
 	<div id="cy"></div>
 	<script>
-		console.log(document.getElementById("cy"));
 		var cytoscapeOptions = {
 			container : document.getElementById("cy"),
 			// layout options
@@ -35,7 +34,7 @@ TEMPLATE_JS_SOURCES
 					"height" : "label",
 					"padding" : "10px",
 					"text-wrap" : "wrap",
-					"text-max-width" : 50,
+					"text-max-width" : 100,
 					"text-opacity" : 1,
 					"background-opacity" : 1,
 					"border-width" : 2,
@@ -64,7 +63,15 @@ TEMPLATE_JS_SOURCES
 				style : {
 					"label" : "data(name)",
 					"width" : 1,
-					"curve-style" : "bezier",
+					"curve-style" : "taxi",
+					"taxi-direction" : "auto",
+					"taxi-turn" : "80%",
+					"taxi-turn-min-distance" : "5px",
+					<!-- "curve-style" : "segments",
+						 "segment-distances" : 20,
+						 "segment-weights" : 0.5, -->
+					<!-- "curve-style" : "bezier",
+						 "control-point-weight" : 0.8,
 					"target-arrow-shape" : "triangle",
 					"line-color" : "black",
 					"target-arrow-color" : "black",
